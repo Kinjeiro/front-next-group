@@ -10,6 +10,9 @@ https://docs.google.com/document/d/1K8G893_mip3fa9NgjQh5Yq6tmI6QhzWueFDoFy0WD1E/
 Пратические задания для уровня MIDDLE - 
 https://docs.google.com/document/d/1fIik3RuU7XJ_OjAhHruFAsAPS-kbqlo9a1lGRGAEp9M/edit?usp=sharing
 
+Практические задания для уровня JUNIOR -
+https://docs.google.com/document/d/1yWxNtk6lEv2s3R3ILZIZJE0hoNfDQ46AKhXMs5nqWeI/edit#
+
 Правила по оформлению коммитов
 https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit
 ```
