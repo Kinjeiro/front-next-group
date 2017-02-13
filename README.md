@@ -1,10 +1,31 @@
-Доброго дня!
+п»ї**Р”РѕР±СЂРѕРіРѕ РІСЂРµРјРµРЅРё СЃСѓС‚РѕРє!**
 
-Это репозиторий для заданий ребят, который изучают Javascript
-Создавайте папочку со своим именем \ ником, в ней создавайте название задания - приложения(можно просто React Task 1) и в бой!
+Р­С‚Рѕ СЂРµРїРѕР·РёС‚РѕСЂРёР№ РґР»СЏ Р·Р°РґР°РЅРёР№ СЂРµР±СЏС‚, РєРѕС‚РѕСЂС‹Р№ РёР·СѓС‡Р°СЋС‚ Javascript.
+РЎРѕР·РґР°РІР°Р№С‚Рµ РїР°РїРѕС‡РєСѓ СЃРѕ СЃРІРѕРµР№ С„Р°РјРёР»РёРµР№, РІ РЅРµР№ СЃРѕР·РґР°РІР°Р№С‚Рµ РЅР°Р·РІР°РЅРёРµ РІР°С€РµРіРѕ РїСЂРёР»РѕР¶РµРЅРёСЏ - Р·Р°РґР°РЅРёСЏ Рё РІ Р±РѕР№!
+Рљ РїСЂРёРјРµСЂСѓ, ***kuzmin/React_Task_1***
 
-Теоритические материалы для разных уровней можно найти здесь - 
+РўРµРѕСЂРёС‚РёС‡РµСЃРєРёРµ РјР°С‚РµСЂРёР°Р»С‹ РґР»СЏ СЂР°Р·РЅС‹С… СѓСЂРѕРІРЅРµР№ РјРѕР¶РЅРѕ РЅР°Р№С‚Рё Р·РґРµСЃСЊ - 
 https://docs.google.com/document/d/1K8G893_mip3fa9NgjQh5Yq6tmI6QhzWueFDoFy0WD1E/edit#
 	
-Пратические задания для уровня MIDDLE - 
+РџСЂР°С‚РёС‡РµСЃРєРёРµ Р·Р°РґР°РЅРёСЏ РґР»СЏ СѓСЂРѕРІРЅСЏ MIDDLE - 
 https://docs.google.com/document/d/1fIik3RuU7XJ_OjAhHruFAsAPS-kbqlo9a1lGRGAEp9M/edit?usp=sharing
+
+РџСЂР°РІРёР»Р° РїРѕ РѕС„РѕСЂРјР»РµРЅРёСЋ РєРѕРјРјРёС‚РѕРІ
+https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit
+```
+<type>(<scope>): <subject>
+<BLANK LINE>
+<body>
+<BLANK LINE>
+<footer>
+
+Type must be one of the following:
+	* feat: A new feature
+	* fix: A bug fix
+	* docs: Documentation only changes
+	* style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+	* refactor: A code change that neither fixes a bug nor adds a feature
+	* perf: A code change that improves performance
+	* test: Adding missing or correcting existing tests
+	* chore: Changes to the build process or auxiliary tools and libraries such as documentation generation
+```
