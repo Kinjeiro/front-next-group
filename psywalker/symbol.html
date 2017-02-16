@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+
+    <title>Найти символы</title>
+  <style>
+  input {
+    height: 20px;
+    font-size: 20px;
+    width: 300px;
+  }
+  button {
+    font-size: 20px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: .5em 2em;
+    outline: none;
+    border-width: 2px 0;
+    border-style: solid none;
+    border-color: #FDBE33 #000 #D77206;
+    border-radius: 6px;
+    background: linear-gradient(#F3AE0F, #E38916) #E38916;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  button:hover { background: linear-gradient(#f5ae00, #f59500) #f5ae00; }
+  button:active { background: linear-gradient(#f59500, #f5ae00) #f59500; }
+
+  h2 {
+    font-size: 20px;
+  }
+  .conclusion__text {
+
+    min-height: 20px;
+    border: 1px solid #000;
+    border-radius: 2px;
+    margin: 10px 0;
+    padding: 3px;
+  }
+  </style>
+  </head>
+  <body>
+
+  <input id="text" type="text" placeholder="Пишем любой текст">
+  <button type="button" id="removeSymbols">Удалить символы</button>
+  <button type="button" id="removeCommand">Удалить команду</button>
+
+  <button type="button" id="bugs">Испортить код соседнего скрипта</button>
+
+  <section class="conclusion" id="conclusion">
+    <h2 id="conclusion__title_one" class="conclusion__title">Удалить два случайных символа</h2>
+    <div id="conclusion__text_one" class="conclusion__text"></div>
+
+    <h2 id="conclusion__title_two" class="conclusion__title">Удаление двух случайных символов кроме цифр и знаков пунктуации </h2>
+    <div id="conclusion__text_two" class="conclusion__text"></div>
+
+    <h2 id="conclusion__title_three" class="conclusion__title">Удаление команды break; из текста</h2>
+    <div id="conclusion__text_three" class="conclusion__text"></div>
+    <script id="noBugs">
+      function noBugs(){
+        var text = h2;
+      }
+    </script>
+  </section>
+
+
+<script>
+var conclusion = document.getElementById('conclusion');
+var conclusion__text_one = document.getElementById('conclusion__text_one');
+var conclusion__text_two = document.getElementById('conclusion__text_two');
+var conclusion__text_three = document.getElementById('conclusion__text_three');
+var scriptNoBugs = document.getElementById('noBugs');
+
+
+var buttonRemoveSymbols = document.getElementById('removeSymbols');
+buttonRemoveSymbols.onclick = removeSymbols;
+
+var buttonRemoveCommand = document.getElementById('removeCommand');
+buttonRemoveCommand.onclick = removeCommand;
+
+var buttonBugs = document.getElementById('bugs');
+buttonBugs.onclick = bugs;
+function getRandomArbitary(min, max)
+{
+  return Math.random() * (max - min) + min;
+}
+
+function removeSymbols(){
+  var text = document.getElementById('text').value || "Мой собственный текст, который состоит не только из буквенно-понятных символов, но и ещё из цифр вроде 1,2,3,4,5... 55... 66... 77. А ещё есть букво-цифро-текст: 1-ф-2-3фвоалфлав44-3";
+
+  /* Удаление двух случайных символов */
+  var conclusion__title_one = document.getElementById('conclusion__title_one');
+  var conclusion__title_two = document.getElementById('conclusion__title_two');
+
+
+  var number = Math.floor(getRandomArbitary(0, text.length-1));
+  conclusion__title_one.innerHTML = conclusion__title_one.innerHTML + " : символы номер " + number;
+
+
+  let newString1 = text.substr(0, (number-1)) + text.substr(number, 1) + text.substr((number+1));
+
+  var number = Math.floor(getRandomArbitary(0, newString1.length-1));
+
+  conclusion__title_one.innerHTML = conclusion__title_one.innerHTML + " и " + number;
+
+  let newString2 = newString1.substr(0, (number-1)) + newString1.substr(number, 1) + newString1.substr((number+1));
+
+  conclusion__text_one.innerHTML = newString2;
+
+  /* Удаление двух случайных символов кроме цифр и знаков пунктуации */
+  var number = Math.floor(getRandomArbitary(0, text.length-1))
+  var symbol = conclusion__title_one.innerHTML.charAt(number);
+
+  if(/[^0-9,.:\s]/.test(symbol)) {
+
+    conclusion__title_two.innerHTML = conclusion__title_two.innerHTML + " : символы номер " + number;
+
+
+    let newString3 = text.substr(0, (number-1)) + text.substr(number, 1) + text.substr((number+1));
+
+    conclusion__title_two.innerHTML = conclusion__title_two.innerHTML + " : " + number;
+
+
+    conclusion__text_two.innerHTML = newString3;
+  }
+
+
+}
+
+function removeCommand(){
+  var conclusion__title_three = document.getElementById('conclusion__title_three');
+
+  var text = document.getElementById('text').value || "<script>alert('Привет мир!'); var text = 'break my heart'; for(vav i = 0; i < 5; i++) { if(i=4) { break; } } <\/script>";
+
+  text = text.replace("break;","");
+
+  conclusion__text_three.innerHTML = "<xmp>"  + text  + "</xmp>";
+
+}
+function bugs(){
+  try {
+
+    noBugs();
+
+  } catch (err) {
+    console.log(err);
+
+  }
+
+}
+</script>
+
+
+
+  </body>
+</html>
