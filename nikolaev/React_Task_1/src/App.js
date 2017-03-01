@@ -1,18 +1,42 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import MyGrid from './MyGrid';
+
+
 
 class App extends Component {
+
+
   render() {
-    return (
+
+      var gridData = [
+          {
+              name: 'Giacomo Guilizzoni\nFounder & CEO',
+              age: 40,
+              nickname: 'Peldi',
+              employee: 'no'
+          },
+          {
+              name: 'Marco Botton\nTuttofare',
+              age: 38,
+              nickname: '',
+              employee:'no'
+          },
+          {
+              name: 'Peter Pettigrew\nMuggleworld',
+              age: 15,
+              nickname: 'Ratface',
+              employee: 'yes'
+          }
+      ]
+
+
+      return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <h2>My First Grid</h2>
+            <MyGrid data={gridData}/>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
       </div>
     );
   }
