@@ -1,14 +1,11 @@
 import React, {Component} from 'react';
-import './App.css';
+
 import MyGrid from './MyGrid';
 
-
+import './App.css';
 
 class App extends Component {
-
-
   render() {
-
       var gridData = [
           {
               name: 'Giacomo Guilizzoni\nFounder & CEO',
@@ -28,14 +25,14 @@ class App extends Component {
               nickname: 'Ratface',
               employee: 'yes'
           }
-      ]
+      ];
 
 
-      return (
+    return (
       <div className="App">
         <div className="App-header">
           <h2>My First Grid</h2>
-            <MyGrid data={gridData}/>
+          <MyGrid data={gridData} />
         </div>
       </div>
     );
