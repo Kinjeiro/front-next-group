@@ -1,0 +1,27 @@
+.MyGrid{
+    font-family: "Calibri";
+    color: #222222;
+}
+
+.MyGrid__table{
+    text-align: left;
+    white-space: pre;
+}
+
+.MyGrid__table__header{
+    background-color: white;
+}
+
+.MyGrid__row:nth-child(even){
+    background-color: antiquewhite;
+    border: 1px solid darkblue;
+}
+
+.MyGrid__row:nth-child(odd){
+    background-color: lightgrey;
+    border: 1px solid lightyellow;
+}
+
+.MyGrid__row__employee{
+    text-align: center;
+}
