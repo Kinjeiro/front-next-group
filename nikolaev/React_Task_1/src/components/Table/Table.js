@@ -12,28 +12,28 @@ export default class Table extends Component {
       nickname: PropTypes.string,
     })).isRequired,
     sortRowsBy: PropTypes.func.isRequired,
+    filterRowsBy: PropTypes.func.isRequired,
   }
 
   renderHeader() {
     return (
       <tr>
-        <TableHeader sortRowsBy={this.props.sortRowsBy} columnName="name" />
-        <TableHeader sortRowsBy={this.props.sortRowsBy} columnName="age" />
-        <TableHeader sortRowsBy={this.props.sortRowsBy} columnName="nickname" />
-        <TableHeader sortRowsBy={this.props.sortRowsBy} columnName="employee" />
+        <TableHeader sortRowsBy={this.props.sortRowsBy} filterRowsBy={this.props.filterRowsBy} columnName="name" />
+        <TableHeader sortRowsBy={this.props.sortRowsBy} filterRowsBy={this.props.filterRowsBy} columnName="age" />
+        <TableHeader sortRowsBy={this.props.sortRowsBy} filterRowsBy={this.props.filterRowsBy} columnName="nickname" />
+        <TableHeader sortRowsBy={this.props.sortRowsBy} filterRowsBy={this.props.filterRowsBy} columnName="employee" />
       </tr>
     );
   }
 
   renderRows() {
-    return this.props.data.map(item => (
+    return this.props.data.map(item => (item.visible || !Object.prototype.hasOwnProperty.call(item, 'visible')) &&
       <tr className="MyGrid__row" key={item.id}>
         <td className="MyGrid__row__name">{item.name}</td>
         <td className="MyGrid__row__age">{item.age}</td>
         <td className="MyGrid__row__nickname">{item.nickname}</td>
         <td className="MyGrid__row__employee">{item.employee}</td>
-      </tr>
-      ));
+      </tr>);
   }
 
   render() {

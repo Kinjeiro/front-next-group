@@ -21,6 +21,10 @@ body {
   color: white;
 }
 
+.App-body {
+  text-align: left;
+}
+
 .App-intro {
   font-size: large;
 }
