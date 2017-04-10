@@ -11,17 +11,17 @@ export default class Table extends Component {
       age: PropTypes.number,
       nickname: PropTypes.string,
     })).isRequired,
-    sortRowsBy: PropTypes.func.isRequired,
-    filterRowsBy: PropTypes.func.isRequired,
+    sortTable: PropTypes.func.isRequired,
+    filterTable: PropTypes.func.isRequired,
   }
 
   renderHeader() {
     return (
       <tr>
-        <TableHeader sortRowsBy={this.props.sortRowsBy} filterRowsBy={this.props.filterRowsBy} columnName="name" />
-        <TableHeader sortRowsBy={this.props.sortRowsBy} filterRowsBy={this.props.filterRowsBy} columnName="age" />
-        <TableHeader sortRowsBy={this.props.sortRowsBy} filterRowsBy={this.props.filterRowsBy} columnName="nickname" />
-        <TableHeader sortRowsBy={this.props.sortRowsBy} filterRowsBy={this.props.filterRowsBy} columnName="employee" />
+        <TableHeader sortTable={this.props.sortTable} filterTable={this.props.filterTable} columnName="name" />
+        <TableHeader sortTable={this.props.sortTable} filterTable={this.props.filterTable} columnName="age" />
+        <TableHeader sortTable={this.props.sortTable} filterTable={this.props.filterTable} columnName="nickname" />
+        <TableHeader sortTable={this.props.sortTable} filterTable={this.props.filterTable} columnName="employee" />
       </tr>
     );
   }

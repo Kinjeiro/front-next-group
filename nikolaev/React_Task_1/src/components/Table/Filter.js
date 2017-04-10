@@ -6,7 +6,7 @@ import './Filter.css';
 export default class Filter extends Component {
   static propTypes = {
     columnName: PropTypes.string.isRequired,
-    filterRowsBy: PropTypes.func.isRequired,
+    filerTable: PropTypes.func.isRequired,
   };
 
   static defaultProps = {
@@ -21,23 +21,11 @@ export default class Filter extends Component {
   filterRowsBy(e) {
     e.preventDefault();
 
-    if (this.props.filterRowsBy) {
-      this.props.filterRowsBy(this.props.columnName, e.target.value);
+    if (this.props.filerTable) {
+      this.props.filerTable({ key: this.props.columnName, value: e.target.value });
     }
   }
-  // ======================================================
-  // HANDLERS
-  // ======================================================
 
-
-  // ======================================================
-  // RENDERS
-  // ======================================================
-
-
-  // ======================================================
-  // MAIN RENDER
-  // ======================================================
   render() {
     const columnName = this.props.columnName;
     const keyName = `filter_${columnName}`;
