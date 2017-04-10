@@ -7,8 +7,8 @@ import Filter from './Filter';
 
 export default class TableHeader extends Component {
   static propTypes = {
-    sortRowsBy: PropTypes.func.isRequired,
-    filterRowsBy: PropTypes.func.isRequired,
+    sortTable: PropTypes.func.isRequired,
+    filterTable: PropTypes.func.isRequired,
     columnName: PropTypes.string.isRequired,
   };
 
@@ -21,8 +21,8 @@ export default class TableHeader extends Component {
   sortRowsBy(e) {
     e.preventDefault();
 
-    if (this.props.sortRowsBy) {
-      this.props.sortRowsBy(this.props.columnName);
+    if (this.props.sortTable) {
+      this.props.sortTable({ key: this.props.columnName });
     }
   }
 
@@ -35,7 +35,7 @@ export default class TableHeader extends Component {
           <a onClick={this.sortRowsBy}>{colName}</a>
         </div>
         <div>
-          <Filter columnName={colName} filterRowsBy={this.props.filterRowsBy} />
+          <Filter columnName={colName} filerTable={this.props.filterTable} />
         </div>
       </th>
     );
